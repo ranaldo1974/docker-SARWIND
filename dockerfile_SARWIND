@@ -11,6 +11,6 @@ EXPOSE 5901:5901/udp
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update && apt-get install -y libxext6 && apt-get install -y libxt6 && apt-get install -y libxmu6 && apt-get install -y unzip && apt-get install -y zip && apt-get install -y wget && wget http://cloud.recas.ba.infn.it:8080/v1/AUTH_fb6d6fcd0e194a96bb6d0420dce8332f/backgroundinfo/MCRInstaller.zip && unzip MCRInstaller.zip -d MCRInstaller && ./MCRInstaller/install -mode silent -destinationFolder /MCR_R2011b && apt-get install -y vnc4server && printf "password\npassword\n\n" | vncpasswd && vnc4server && echo "export DISPLAY=$HOSTNAME:1" >> /etc/bash.bashrc && mkdir SARWIND_LGMod
+RUN apt-get update && apt-get install -y libxext6 && apt-get install -y libxt6 && apt-get install -y libxmu6 && apt-get install -y unzip && apt-get install -y zip && apt-get install -y wget && wget http://cloud.recas.ba.infn.it:8080/v1/AUTH_fb6d6fcd0e194a96bb6d0420dce8332f/backgroundinfo/MCR_R2016b.zip && unzip MCR_R2016b.zip && apt-get install -y vnc4server && printf "password\npassword\n\n" | vncpasswd && vnc4server && echo "export DISPLAY=$HOSTNAME:1" >> /etc/bash.bashrc && mkdir SARWIND_LGMod
 
     
